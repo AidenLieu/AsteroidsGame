@@ -4,6 +4,9 @@ class Spaceship extends Floater
     myCenterX = 1000;
     myCenterY = 1000;
     myColor = 255;
+    myXspeed = 0;
+    myYspeed = 0;
+    myPointDirection = 0;
     corners = 3;
     yCorners = new int[3];
     xCorners = new int[3];
