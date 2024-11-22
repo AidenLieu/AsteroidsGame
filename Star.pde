@@ -1,3 +1,4 @@
+
 class Star //note that this class does NOT extend Floater
 {
   private int myX, myY;
@@ -6,7 +7,8 @@ class Star //note that this class does NOT extend Floater
     myY = (int)(Math.random() * height);
   }
   public void show() {
+    noStroke();
     fill(255);
-    ellipse(myX, myY, 10, 10);
+    ellipse(myX, myY, 5, 5);
   }
 }
