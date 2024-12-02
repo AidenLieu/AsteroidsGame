@@ -32,7 +32,7 @@ public void keyPressed(){
     ship.turn(-5);
   }
   if(key == 'd'){
-    ship.accelerate(5);
+    ship.turn(5);
   }
   if(key == 'r'){
     ship.hyperspace();
