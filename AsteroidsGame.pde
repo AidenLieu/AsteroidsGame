@@ -4,7 +4,7 @@ Star[] stars = new Star[1000];
 
 //your variable declarations here
 public void setup(){
-  fullScreen();
+  size(1000,1000);
   background(0);
   for(int i = 0; i < stars.length; i++){
     stars[i] = new Star();
