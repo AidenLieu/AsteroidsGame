@@ -23,9 +23,12 @@ public void draw()
   }
   ship.move();
   ship.show();
-  for(int i = 0; i < asteroids.size(); i++){
+  for(int i = asteroids.size() - 1; i >= 0; i--){
     asteroids.get(i).show();
     asteroids.get(i).move((int)(Math.random() * 10));
+    if((dist((float) ship.getX(),(float) ship.getY(), (float) asteroids.get(i).getX(), (float) asteroids.get(i).getY())) < 50){
+      asteroids.remove(i);
+    }
   }
 }
   
@@ -49,7 +52,7 @@ public void keyPressed(){
     asteroids.add(new Asteroid());
   }
   if(key == 'x'){
-    for(int i = 0; i < asteroids.size(); i++){
+    while(asteroids.size() > 0){
       asteroids.remove(0);
     }
   }
