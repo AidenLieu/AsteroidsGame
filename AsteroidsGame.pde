@@ -1,4 +1,5 @@
 Spaceship ship;
+ArrayList<Bullet> bullets = new ArrayList<Bullet>();
 ArrayList<Asteroid> asteroids = new ArrayList<Asteroid>();
 Star[] stars = new Star[1000];
 
@@ -23,6 +24,7 @@ public void draw()
   }
   ship.move();
   ship.show();
+
   for(int i = 0; i < asteroids.size(); i++){
     asteroids.get(i).show();
     asteroids.get(i).move((int)(Math.random() * 10));
@@ -51,6 +53,9 @@ public void keyPressed(){
   }
   if(key == 't'){
     asteroids.add(new Asteroid());
+  }
+  if(key == ' '){
+    bullets.add(new Bullet(ship));
   }
   if(key == 'x'){
     while(asteroids.size() > 0){
