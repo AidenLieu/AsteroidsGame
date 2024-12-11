@@ -22,9 +22,21 @@ public void draw()
   for(int i = 0; i < stars.length; i++){
     stars[i].show();
   }
+  for(int i = 0; i < bullets.size(); i++){
+    bullets.get(i).show();
+    bullets.get(i).move();
+    for(int j = 0; j < asteroids.size(); j++){
+      
+      if(i >= 0 && ((dist((float) bullets.get(i).getX(),(float) bullets.get(i).getY(), (float) asteroids.get(j).getX(), (float) asteroids.get(j).getY())) < 50)){
+        asteroids.remove(j);
+        j--;
+        bullets.remove(i);
+        i--;  
+      }        
+    }
+  }
   ship.move();
   ship.show();
-
   for(int i = 0; i < asteroids.size(); i++){
     asteroids.get(i).show();
     asteroids.get(i).move((int)(Math.random() * 10));
