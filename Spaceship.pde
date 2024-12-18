@@ -38,4 +38,7 @@ class Spaceship extends Floater
   public double getYspeed(){
     return myYspeed;
   }
+  public double getDirection(){
+    return myPointDirection;
+  }
 }
