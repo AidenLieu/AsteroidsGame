@@ -66,7 +66,7 @@ public void keyPressed(){
   if(key == 't'){
     asteroids.add(new Asteroid());
   }
-  if(key == 'c'){
+  if(key == ' '){
     bullets.add(new Bullet(ship));
   }
   if(key == 'x'){
